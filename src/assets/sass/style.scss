@@ -1,0 +1,36 @@
+@import "components/mixins/mixin";
+@import "components/variables/variables";
+@import "blocks/index/header";
+@import "blocks/index/subheader";
+@import "blocks/index/main";
+@import "blocks/index/customer";
+@import "blocks/index/video";
+@import "blocks/index/clients";
+@import "blocks/index/footer";
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.btn {
+    @include roboto();
+    display: inline-block;
+    color: $gray-color;
+    padding: 7px 26px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 24px;
+    text-transform: uppercase;
+    text-align: center;
+    cursor: pointer;
+    &:hover {
+        color: darken($gray-color, 30%);
+    }
+}
