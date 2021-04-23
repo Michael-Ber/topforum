@@ -31,7 +31,8 @@
     .header__link:hover {
       color: #cccccc; }
   .header__button {
-    background-color: #e8d8b6; }
+    background-color: #e8d8b6;
+    color: #323232; }
     .header__button:hover {
       background-color: #dcc38f; }
 
@@ -89,13 +90,206 @@
     text-decoration: underline; }
 
 .subheader__button {
-  background-color: #c99c47; }
+  background-color: #c99c47;
+  color: #323232; }
   .subheader__button:hover {
     background-color: #ab8132; }
 
 .main {
-  display: block;
-  width: 100%; }
+  padding-bottom: 50px; }
+  .main #main_img {
+    width: 100%; }
+  .main__text {
+    margin-top: 66px;
+    text-align: center; }
+    .main__text span {
+      font-family: 'Roboto', sans-serif;
+      font-size: 17px;
+      line-height: 30px;
+      font-weight: 300;
+      color: #323232; }
+  .main__cards {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin-top: 58px; }
+  .main__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+    .main__card:not(:last-child) {
+      margin-right: 30px; }
+    .main__card-circle {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 170px;
+      height: 170px;
+      border-radius: 100%;
+      border: 1px solid #c99c47; }
+    .main__card-img {
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+    .main__card-title {
+      font-family: 'Roboto', sans-serif;
+      font-size: 17px;
+      font-weight: 500;
+      color: #323232;
+      text-align: center;
+      margin-top: 27px;
+      text-transform: uppercase; }
+    .main__card-text {
+      font-family: 'Roboto', sans-serif;
+      font-size: 15px;
+      font-weight: 300;
+      text-align: center;
+      line-height: 22px;
+      margin-top: 15px; }
+    .main__card-button {
+      background-color: #d4c198;
+      font-size: 13px;
+      line-height: 24px;
+      font-weight: 400;
+      color: #fff;
+      margin: 23px auto 0 auto; }
+      .main__card-button:hover {
+        background-color: #b69650; }
+    .main__card-footer {
+      font-family: 'Roboto', sans-serif;
+      font-size: 11px;
+      font-weight: 400;
+      color: #919191;
+      text-align: center;
+      margin-top: 16px; }
+  .main__buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px; }
+  .main__button {
+    font-family: 'Roboto', sans-serif;
+    width: 153px;
+    padding: 14px 0;
+    font-size: 13px;
+    font-weight: 400;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer; }
+    .main__button_register {
+      background-color: #c99c47;
+      margin-right: 15px; }
+      .main__button_register:hover {
+        background-color: #ab8132; }
+    .main__button_subscribe {
+      background-color: #323232; }
+      .main__button_subscribe:hover {
+        background-color: #191919; }
+
+.customer {
+  padding: 55px 0 60px 0;
+  background-color: #e8d8b6; }
+  .customer__carousel {
+    position: relative;
+    margin-top: 40px; }
+  .customer__track {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; }
+  .customer__item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start; }
+  .customer__photo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 121px;
+    min-height: 121px;
+    border-radius: 100%;
+    background-color: #fff; }
+    .customer__photo .with_photo {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 100%; }
+  .customer__descr {
+    position: relative;
+    width: 330px;
+    padding: 30px;
+    background-color: #fff;
+    margin-left: 35px; }
+    .customer__descr::after {
+      content: '';
+      border: 20px solid transparent;
+      border-right: 20px solid #fff;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translate(-100%, 100%); }
+  .customer__name {
+    font-family: 'Roboto', sans-serif;
+    font-size: 17px;
+    font-weight: 500;
+    color: #323232; }
+  .customer__text {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 300;
+    color: #323232; }
+  .customer__data {
+    font-family: 'Roboto', sans-serif;
+    width: 120px;
+    margin: 10px 0;
+    font-size: 9px;
+    font-weight: 300;
+    color: #fff;
+    padding: 10px 15px;
+    background-color: #bbbbbd; }
+  .customer__arrows .arrow_left {
+    position: absolute;
+    top: 80px;
+    left: -70px;
+    cursor: pointer; }
+    .customer__arrows .arrow_left span:nth-child(1) {
+      border: 25px solid transparent;
+      border-right: 10px solid #c99c47;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 5;
+      transform: translate(0, 0); }
+    .customer__arrows .arrow_left span:nth-child(2) {
+      border: 25px solid transparent;
+      border-right: 10px solid #e8d8b6;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 10;
+      transform: translate(2px, 0); }
+  .customer__arrows .arrow_right {
+    position: absolute;
+    top: 80px;
+    right: -70px;
+    cursor: pointer; }
+    .customer__arrows .arrow_right span:nth-child(1) {
+      border: 25px solid transparent;
+      border-left: 10px solid #c99c47;
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 5;
+      transform: translate(0, 0); }
+    .customer__arrows .arrow_right span:nth-child(2) {
+      border: 25px solid transparent;
+      border-left: 10px solid #e8d8b6;
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 10;
+      transform: translate(-2px, 0); }
 
 body {
   margin: 0;
@@ -109,7 +303,6 @@ body {
 .btn {
   font-family: 'Roboto', sans-serif;
   display: inline-block;
-  color: #323232;
   padding: 7px 26px;
   font-size: 12px;
   font-weight: 400;
@@ -117,5 +310,11 @@ body {
   text-transform: uppercase;
   text-align: center;
   cursor: pointer; }
-  .btn:hover {
-    color: black; }
+
+.title {
+  font-family: 'Roboto', sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  color: #323232;
+  text-transform: uppercase;
+  text-align: center; }

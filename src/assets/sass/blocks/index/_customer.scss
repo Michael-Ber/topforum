@@ -1,0 +1,124 @@
+.customer {
+    padding: 55px 0 60px 0;
+    background-color: $orange-light-color;
+    &__carousel {
+        position: relative;
+        margin-top: 40px;
+    }
+    &__track {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    &__item {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    &__photo {
+        @include flexcenter();
+        min-width: 121px;
+        min-height: 121px;
+        border-radius: 100%;
+        background-color: $white-color;
+        .with_photo {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 100%;
+        }
+    }
+    &__descr {
+        position: relative;
+        width: 330px;
+        padding: 30px;
+        background-color: $white-color;
+        margin-left: 35px;
+        &::after {
+            content: '';
+            border: 20px solid transparent;
+            border-right: 20px solid $white-color;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: translate(-100%, 100%);
+        }
+    }
+    &__name {
+        @include roboto();
+        font-size: 17px;
+        font-weight: 500;
+        color: $gray-color;
+    }
+    &__text {
+        @include roboto();
+        font-size: 14px;
+        line-height: 22px;
+        font-weight: 300;
+        color: $gray-color;
+    }
+    &__data {
+        @include roboto();
+        width: 120px;
+        margin: 10px 0;
+        font-size: 9px;
+        font-weight: 300;
+        color: $white-color;
+        padding: 10px 15px;
+        background-color: #bbbbbd;
+    }
+    &__arrows {
+        .arrow_left {
+            position: absolute;
+            top: 80px;
+            left: -70px;
+            cursor: pointer;
+            span {
+                &:nth-child(1) {
+                    border: 25px solid transparent;
+                    border-right: 10px solid $main-color;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    z-index: 5;
+                    transform: translate(0, 0);
+                }
+                &:nth-child(2) {
+                    border: 25px solid transparent;
+                    border-right: 10px solid $orange-light-color;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    z-index: 10;
+                    transform: translate(2px, 0);
+                }
+            }
+        }
+        .arrow_right {
+            position: absolute;
+            top: 80px;
+            right: -70px;
+            cursor: pointer;
+            span {
+                &:nth-child(1) {
+                    border: 25px solid transparent;
+                    border-left: 10px solid $main-color;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    z-index: 5;
+                    transform: translate(0, 0);
+                }
+                &:nth-child(2) {
+                    border: 25px solid transparent;
+                    border-left: 10px solid $orange-light-color;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    z-index: 10;
+                    transform: translate(-2px, 0);
+                }
+            }
+        }
+    }
+}

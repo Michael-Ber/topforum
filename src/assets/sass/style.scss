@@ -22,7 +22,6 @@ body {
 .btn {
     @include roboto();
     display: inline-block;
-    color: $gray-color;
     padding: 7px 26px;
     font-size: 12px;
     font-weight: 400;
@@ -30,7 +29,12 @@ body {
     text-transform: uppercase;
     text-align: center;
     cursor: pointer;
-    &:hover {
-        color: darken($gray-color, 30%);
-    }
+}
+.title {
+    @include roboto();
+    font-size: 24px;
+    font-weight: 500;
+    color: $gray-color;
+    text-transform: uppercase;
+    text-align: center;
 }
