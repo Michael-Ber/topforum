@@ -1,0 +1,28 @@
+.clients {
+    padding: 45px 0 70px 0;
+    background-color: $orange-light-color;
+    &__carousel {
+        position: relative;
+        &-track {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+    }
+    &__item {
+        @include flexcenter();
+        width: 180px;
+        height: 123px;
+        background-color: #fff;
+    }
+    &__arrow {
+        &-left {
+            top: 35px;
+            left: -70px;
+        }
+        &-right {
+            top: 35px;
+            right: -70px;
+        }
+    }
+}

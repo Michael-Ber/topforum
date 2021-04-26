@@ -11,7 +11,7 @@
 <body>
     
     <!-- HEADER -->
-    <div class="header">
+    <header class="header">
         <div class="container">
             <div class="header__wrapper">
                 <ul class="header__items">
@@ -31,7 +31,7 @@
                 <div class="header__button btn">top forum club</div>
             </div>
         </div>
-    </div>
+    </header>
     <!-- /HEADER -->
 
     <!-- SUBHEADER -->
@@ -122,7 +122,7 @@
     <!-- CUSTOMER -->
     <div class="customer">
         <div class="container">
-            <div class="customer__title title">CUSTOMER REVIEWS</div>
+            <h2 class="customer__title title">CUSTOMER REVIEWS</h2>
             <div class="customer__carousel">
                 <div class="customer__track">
                     <div class="customer__item">
@@ -148,12 +148,12 @@
                         </div>
                     </div>
                 </div>
-                <div class="customer__arrows">
-                    <div class="arrow_left">
+                <div class="customer__arrows arrows">
+                    <div class="customer__arrow-left arrow_left">
                         <span></span>
                         <span></span>
                     </div>
-                    <div class="arrow_right">
+                    <div class="customer__arrow-right arrow_right">
                         <span></span>
                         <span></span>
                     </div>
@@ -164,15 +164,89 @@
     <!-- /CUSTOMER -->
 
     <!-- VIDEO -->
-
+    <div class="video">
+        <div class="container">
+            <h2 class="video__title title">Promo video</h2>
+            <div class="video__wrapper">
+                <video src="./assets/Deep Purple-Haunted.mp4" controls="controls"  poster="./assets/img/index/video_img.jpg" class="video__screen"></video>
+            </div>
+        </div>
+    </div>
     <!-- /VIDEO -->
 
     <!-- CLIENTS -->
-
+    <div class="clients">
+        <div class="container">
+            <h2 class="video__title title">Our clients</h2>
+            <div class="clients__carousel">
+                <div class="clients__carousel-wrapper">
+                    <div class="clients__carousel-track">
+                        <div class="clients__item">
+                            <img src="./assets/icons/index/clients/logo1.png" alt="logo1">
+                        </div>
+                        <div class="clients__item">
+                            <img src="./assets/icons/index/clients/logo2.png" alt="logo2">
+                        </div>
+                        <div class="clients__item">
+                            <img src="./assets/icons/index/clients/logo3.png" alt="logo3">
+                        </div>
+                        <div class="clients__item">
+                            <img src="./assets/icons/index/clients/logo4.png" alt="logo4">
+                        </div>
+                        <div class="clients__item">
+                            <img src="./assets/icons/index/clients/logo5.png" alt="logo5">
+                        </div>
+                        <div class="clients__item">
+                            <img src="./assets/icons/index/clients/logo6.png" alt="logo6">
+                        </div>
+                    </div>
+                </div>
+                <div class="clients__arrows arrows">
+                    <div class="clients__arrow-left arrow_left">
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="clients__arrow-right arrow_right">
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- /CLIENTS -->
 
     <!-- FOOTER -->
-
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__upper">
+                <ul class="footer__links">
+                    <li><span class="footer__link-title">TOP FORUM</span></li>
+                    <li><a href="#" class="footer__link">Sponsors</a></li>
+                    <li><a href="#" class="footer__link">Exhibitors</a></li>
+                    <li><a href="#" class="footer__link">Speakers</a></li>
+                    <li><a href="#" class="footer__link">Media</a></li>
+                </ul>
+                <ul class="footer__contacts">
+                    <li><span class="footer__link-title">CONTACT</span></li>
+                    <li><span class="footer__link-text">Top Forum Group</span></li>
+                    <li><span class="footer__link-text">Trnavska cesta 82, 821 02 Bratislava, Slovakia</span></li><br>
+                    <li><a href="tel:+421221025322" class="footer__link">+421 221 025 322</a></li>
+                    <li><a href="#" class="footer__link">info@top forum.com</a></li>
+                </ul>
+                <div class="footer__followus">
+                    <span class="footer__link-title">FOLLOW US</span>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <div class="footer__rights"><span>© 2014 Top Forum Group. All rights reserved.</span></div>
+                <div class="footer__logo">
+                    <span>Website development:</span>
+                    <img src="./assets/icons/index/mamont.png" alt="mamont">
+                </div>
+            </div>
+        </div>
+    </footer>
     <!-- /FOOTER -->
 
     <script src="script.js"></script>

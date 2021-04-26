@@ -1,0 +1,91 @@
+.footer {
+    padding: 45px 0;
+    height: 275px;
+    background-color: $gray-color;
+    &__upper {
+        position: relative;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: -68px;
+            left: -20px;
+            width: 1170px;
+            height: 1px;
+            background-color: rgba(#fff, .1);
+        } 
+    }
+    &__followus {
+        flex-grow: 1;
+        text-align: end;
+    }
+    &__link-title {
+        @include roboto();
+        font-size: 14px;
+        font-weight: 400;
+        text-transform: uppercase;
+        color: $main-color;
+    }
+    &__links {
+        list-style-type: none;
+        li {
+            margin-bottom: 10px;
+        }
+    }
+    &__contacts {
+        position: relative;
+        margin-left: 105px;
+        list-style-type: none;
+        li {
+            margin-bottom: 10px;
+        }
+        &::before {
+            content: '';
+            position: absolute;
+            top: -5px;
+            left: -45px;
+            width: 1px;
+            height: 210px;
+            background-color: rgba(#fff, .1);
+        }
+    }
+    &__link, &__link-text {
+        @include roboto();
+        text-decoration: none;
+        font-size: 12px;
+        font-weight: 300;
+        color: $white-color;
+        &:not(.footer__link-text) {
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+    &__bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 105px;
+    }
+    &__logo {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        span {
+            @include roboto();
+            font-size: 13px;
+            font-weight: 300;
+            color: rgba($white-color, .3);
+        }
+    }
+    &__rights {
+        @include roboto();
+        font-size: 14px;
+        line-height: 22px;
+        font-weight: 300;
+        color: #f8f3e9;
+    }
+    
+}
