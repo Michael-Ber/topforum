@@ -1,5 +1,8 @@
 .main {
-	padding-bottom: 50px;
+	padding: 0 0 50px 0;
+	@media (max-width: 575px) {
+		padding: 0 15px 50px 15px;
+	}
 	#main_img {
 		width: 100%;
 	}
@@ -19,13 +22,17 @@
 		justify-content: space-around;
 		align-items: flex-start;
 		margin-top: 58px;
+		list-style-type: none;
+		@media (max-width: 767px) {
+			flex-direction: column;
+		}
 	}
 	&__card {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		&:not(:last-child) {
-			margin-right: 30px;
+			margin: 0 30px 0 0;
 		}
 		&-circle {
 			@include flexcenter();
@@ -39,20 +46,28 @@
 		}
 		&-title {
 			@include roboto();
+			min-height: 40px;
 			font-size: 17px;
 			font-weight: 500;
 			color: $gray-color;
 			text-align: center;
 			margin-top: 27px;
 			text-transform: uppercase;
+			@media (max-width: 767px) {
+				min-height: unset;
+			}
 		}
 		&-text {
 			@include roboto();
+			min-height: 180px;
 			font-size: 15px;
 			font-weight: 300;
 			text-align: center;
 			line-height: 22px;
 			margin-top: 15px;
+			@media (max-width: 767px) {
+				min-height: unset;
+			}
 		}
 		&-button {
 			background-color: $sec-color;
@@ -72,6 +87,12 @@
 			color: $gray-light-color;
 			text-align: center;
 			margin-top: 16px;
+		}
+		
+		@media (max-width: 767px) {
+			&:not(:last-child) {
+				margin: 0 0 30px 0;
+			}
 		}
 	}
 	&__buttons {

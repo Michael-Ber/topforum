@@ -1,9 +1,16 @@
 .customer {
-    padding: 55px 0 60px 0;
+    padding: 55px 60px 60px 60px;
     background-color: $orange-light-color;
+    @media (max-width: 575px) {
+        padding: 55px 10px 60px 10px;
+    }
     &__carousel {
         position: relative;
+        width: 100%;
         margin-top: 40px;
+    }
+    &__frame {
+        overflow: hidden;
     }
     &__track {
         display: flex;
@@ -14,6 +21,16 @@
         display: flex;
         justify-content: flex-start;
         align-items: flex-start;
+        min-width: calc(50% - 50px);
+        &:not(:first-child) {
+            margin-left: 50px;
+        }
+        @media (max-width: 991px) {
+            min-width: calc(100% - 50px);
+        }
+        @media (max-width: 575px) {
+            align-items: center;
+        }
     }
     &__photo {
         @include flexcenter();
@@ -21,6 +38,10 @@
         min-height: 121px;
         border-radius: 100%;
         background-color: $white-color;
+        @media (max-width: 575px) {
+            min-width: 65px;
+            min-height: 65px;
+        }
         .with_photo {
             width: 100%;
             height: 100%;
@@ -30,7 +51,6 @@
     }
     &__descr {
         position: relative;
-        width: 330px;
         padding: 30px;
         background-color: $white-color;
         margin-left: 35px;
@@ -42,6 +62,9 @@
             top: 0;
             left: 0;
             transform: translate(-100%, 100%);
+            @media (max-width: 575px) {
+                top: 70px;
+            }
         }
     }
     &__name {
@@ -67,13 +90,18 @@
         padding: 10px 15px;
         background-color: #bbbbbd;
     }
+    &__arrows {
+        @media (max-width: 575px) {
+            display: none;
+        }
+    }
     &__arrow {
         &-left {
-            top: 80px;
+            top: 100px;
             left: -70px;
         }
         &-right {
-            top: 80px;
+            top: 100px;
             right: -70px;
         }
     }

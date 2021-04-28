@@ -1,4 +1,5 @@
 .header {
+    padding: 10px 0;
     background-color: $gray-color;
     &__wrapper {
         display: flex;
@@ -10,8 +11,10 @@
         justify-content: flex-start;
         align-items: center;
         list-style-type: none;
-        padding: 10px 0;
         margin: 0;
+        @media (max-width: 575px) {
+            display: none;
+        }
     }
     &__item {
         display: flex;
@@ -44,6 +47,27 @@
         &:hover {
             background-color: darken($orange-light-color, 10%);
         }
+        @media (max-width: 575px) {
+            margin-right: 20px;
+        }
     }
+    &__hamburger {
+        display: none;
+        cursor: pointer;
+        @media (max-width: 575px) {
+            display: block;
+            margin-left: 20px;
+        }
+        span {
+            display: block;
+            width: 20px;
+            height: 2px;
+            background-color: $white-color;
+            &:not(:last-child) {
+                margin-bottom: 5px;
+            }
+        }
+    }
+    
 }
 

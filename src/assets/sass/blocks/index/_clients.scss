@@ -1,19 +1,42 @@
 .clients {
-    padding: 45px 0 70px 0;
+    padding: 45px 60px 70px 60px;
     background-color: $orange-light-color;
     &__carousel {
         position: relative;
+        &-frame {
+            overflow: hidden;
+        }
         &-track {
             display: flex;
-            justify-content: space-between;
+            justify-content: flex-start;
             align-items: flex-start;
         }
     }
     &__item {
         @include flexcenter();
-        width: 180px;
-        height: 123px;
+        min-width: calc(100% / 6 - 12px);
+        min-height: 123px;
         background-color: #fff;
+        @media (max-width: 1199px) {
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        @media (max-width: 991px) {
+            min-width: calc(100% / 5 - 12px);
+        }
+        @media (max-width: 767px) {
+            min-width: calc(100% / 3 - 12px);
+        }
+        @media (max-width: 575px) {
+            min-width: calc(100% / 2 - 12px);
+        }
+        
+        &:not(:last-child) {
+            margin-right: 13px;
+        }
     }
     &__arrow {
         &-left {
@@ -23,6 +46,11 @@
         &-right {
             top: 35px;
             right: -70px;
+        }
+    }
+    &__arrows {
+        @media (max-width: 575px) {
+            display: none;
         }
     }
 }

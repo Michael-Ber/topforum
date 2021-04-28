@@ -1,7 +1,10 @@
 .footer {
     padding: 45px 0;
-    height: 275px;
+    // height: 275px;
     background-color: $gray-color;
+    @media (max-width: 575px) {
+        padding: 45px 10px 45px 10px;
+    }
     &__upper {
         position: relative;
         display: flex;
@@ -12,14 +15,13 @@
             position: absolute;
             bottom: -68px;
             left: -20px;
-            width: 1170px;
+            width: calc(100% + 30px);
             height: 1px;
             background-color: rgba(#fff, .1);
+            @media (max-width: 575px) {
+                bottom: -60px;
+            }
         } 
-    }
-    &__followus {
-        flex-grow: 1;
-        text-align: end;
     }
     &__link-title {
         @include roboto();
@@ -27,17 +29,39 @@
         font-weight: 400;
         text-transform: uppercase;
         color: $main-color;
+        @media (max-width: 575px) {
+            font-size: 12px;
+        }
     }
     &__links {
+        flex-basis: 18%;
         list-style-type: none;
+        @media (max-width: 991px) {
+            flex-basis: 22%;
+        }
+        @media (max-width: 767px) {
+            flex-basis: 28%;
+        }
+        @media (max-width: 575px) {
+            flex-basis: calc(23% + 30px);
+        }
         li {
             margin-bottom: 10px;
         }
     }
     &__contacts {
         position: relative;
-        margin-left: 105px;
         list-style-type: none;
+        flex-basis: 64%;
+        @media (max-width: 991px) {
+            flex-basis: 60%;
+        }
+        @media (max-width: 767px) {
+            flex-basis: 54%;
+        }
+        @media (max-width: 575px) {
+            margin-left: 30px;
+        }
         li {
             margin-bottom: 10px;
         }
@@ -49,6 +73,16 @@
             width: 1px;
             height: 210px;
             background-color: rgba(#fff, .1);
+            @media (max-width: 575px) {
+                left: -15px;
+            }
+        }
+    }
+    &__followus {
+        flex-basis: 18%;
+        text-align: end;
+        @media (max-width: 575px) {
+            flex-basis: calc(23% + 30px);
         }
     }
     &__link, &__link-text {
@@ -62,12 +96,19 @@
                 text-decoration: underline;
             }
         }
+        @media (max-width: 575px) {
+            font-size: 10px;
+        }
     }
     &__bottom {
         display: flex;
         justify-content: space-between;
         align-items: center;
         margin-top: 105px;
+        @media (max-width: 575px) {
+            flex-direction: column;
+            margin-top:70px;
+        }
     }
     &__logo {
         display: flex;
@@ -77,6 +118,7 @@
             @include roboto();
             font-size: 13px;
             font-weight: 300;
+            margin-right: 10px;
             color: rgba($white-color, .3);
         }
     }
