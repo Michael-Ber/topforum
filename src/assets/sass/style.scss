@@ -7,12 +7,13 @@
 @import "blocks/index/video";
 @import "blocks/index/clients";
 @import "blocks/index/footer";
+@import "blocks/sponsors/sponsors";
 
 body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    ul, li {
+    ul, li, h1, h2, h3, h4, h5 {
         padding: 0;
         margin: 0;
     }
@@ -30,7 +31,6 @@ body {
     font-size: 12px;
     font-weight: 400;
     line-height: 24px;
-    text-transform: uppercase;
     text-align: center;
     cursor: pointer;
 }
@@ -91,7 +91,6 @@ body {
             }
         }
     }
-    
 }
 
 @media (max-width: 1199px) {

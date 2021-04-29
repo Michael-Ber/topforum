@@ -1,11 +1,28 @@
 .subheader {
+    position: fixed;
+    width: 100%;
+    top: 58px;
+    left: 0;
     padding: 15px 0;
+    height: 68px;
+    background: $white-color;
+    z-index: 50;
+    border-bottom: 1px solid rgba($gray-color, .2);
+    @media (max-width: 767px) {
+        height: 120px;
+    }
+    @media (max-width: 767px) {
+        height: 135px;
+    }
     &__wrapper {
         display: flex;
         justify-content: space-between;
         align-items: center;
         @media (max-width: 767px) {
             flex-direction: column;
+        }
+        @media (max-width: 575px) {
+            padding: 0 10px;
         }
     }
     &__items {
@@ -48,7 +65,7 @@
         @media (max-width: 575px) {
             flex-direction: column;
             &:not(:first-child) {
-                margin-left: 15px;
+                margin-left: 0;
             }
         }
     }
