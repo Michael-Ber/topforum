@@ -51,6 +51,7 @@
         font-weight: 300;
         color: $white-color;
         text-decoration: none;
+        text-transform: capitalize;
         &:hover {
             color: darken($white-color, 20%);
         }
@@ -82,7 +83,7 @@
             }
         }
     }
-    &__sponsors {
+    &__menu {
         display: none;
         position: absolute;
         top: 58px;

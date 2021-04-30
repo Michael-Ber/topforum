@@ -1,0 +1,18 @@
+.contacts {
+    margin-top: 152px + 50px;
+    padding: 0 0 70px 0;
+    @media (max-width: 767px) {
+        margin-top: 254px;
+    }
+    @media (max-width: 575px) {
+        padding: 0 10px 70px 10px;
+    }
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    &__map {
+        width: 750px;
+    }
+}
