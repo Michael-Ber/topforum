@@ -1,0 +1,143 @@
+.feedback {
+    padding: 45px 0;
+    background-color: $orange-light-color;
+    @media (max-width: 575px) {
+        padding: 45px 5px;
+    }
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        @media (max-width: 575px) {
+            flex-direction: column;
+        }
+    }
+    &__form {
+        width: calc(50% - 15px);
+        form {
+            display: grid;
+            // grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(3, minmax(42px, auto));
+            grid-auto-rows: minmax(42px, auto);
+            grid-template-areas: "feedappeal feedappeal"
+                                 "feedemail feedname"
+                                 ". feedbtn"
+            ;
+            column-gap: 15px;
+            row-gap: 15px;
+            .feedappeal {
+                grid-area: feedappeal;
+            }
+            #feedappeal {
+                width: calc(100% - 20px);
+                height: 95px;
+                padding: 10px;
+                resize: none;
+            }
+            .feedemail {
+                grid-area: feedemail;
+                align-self: flex-end;
+            }
+            #feedemail {
+                width: calc(100% - 32px);
+            }
+            .feedname {
+                grid-area: feedname;
+                align-self: flex-end;
+            }
+            #feedname {
+                width: calc(100% - 32px);
+            }
+            .feedbtn {
+                grid-area: feedbtn;
+                justify-self: flex-end;
+            }
+            @media (max-width: 767px) {
+                grid-template-areas: "feedappeal feedappeal"
+                                 "feedemail feedemail"
+                                 "feedname feedname"
+                                 ". feedbtn"
+            ;
+            }
+        }
+        &-field {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            label {
+                @include roboto();
+                font-size: 14px;
+                line-height: 24px;
+                font-weight: 500;
+                color: #606060;
+            }
+            input {
+                padding: 15px 15px;
+            }
+        }
+        @media (max-width: 575px) {
+            width: 100%;
+        }
+    }
+    &__btn {
+        @include roboto();
+        width: 111px;
+        font-size: 13px;
+        line-height: 24px;
+        font-weight: 400;
+        text-transform: uppercase;
+        color: $white-color;
+        background-color: $main-color;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+        &:hover {
+            background-color: darken($main-color, 10%);
+        }
+    }
+    &__questions {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: calc(50% - 15px);
+        margin-top: 20px;
+        &-info {
+            @include roboto();
+            font-size: 15px;
+            line-height: 32px;
+            font-weight: 500;
+            color: $gray-color;
+            @media (max-width: 575px) {
+                font-size: 12px;
+            }
+            a {
+                font-weight: 400;
+                text-decoration: underline;
+                color: $main-color;
+                cursor: pointer;
+                &:hover {
+                    color: lighten($main-color, 10%);
+                }
+            }
+        }
+        &-phone {
+            @include roboto();
+            font-size: 23px;
+            line-height: 24px;
+            font-weight: 700;
+            color: $gray-color;
+            text-decoration: none;
+            &:hover {
+                text-decoration: underline;
+            }
+            @media (max-width: 575px) {
+                font-size: 18px;
+            }
+        }
+        @media (max-width: 575px) {
+            width: 100%;
+        }
+    }
+     
+}

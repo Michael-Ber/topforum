@@ -1,0 +1,205 @@
+.registration {
+    margin-top: 152px + 50px;
+    padding: 0 0 70px 0;
+    @media (max-width: 767px) {
+        margin-top: 254px;
+    }
+    
+    .title {
+        @media (max-width: 575px) {
+            font-size: 18px;
+        }
+    }
+    &__btns {
+        margin-top: 40px;
+    }
+    &__btn {
+        position: relative;
+        width: 414px;
+        border: 2px solid $main-color;
+        text-align: center;
+        padding: 15px 0;
+        margin: 0 auto;
+        &:first-child {
+            margin-bottom: 25px;
+            &:after {
+                content: url(./assets/icons/sponsors/select_arrow.png);
+                position: absolute;
+                left: 50%;
+                bottom: -25px;
+                transform: translateX(-50%);
+            }
+        }
+        a {
+            @include roboto();
+            display: block;
+            font-size: 14px;
+            line-height: 24px;
+            font-weight: 500;
+            text-decoration: none;
+            color: $main-color;
+        }
+        @media (max-width: 575px) {
+            width: 290px;
+        }
+    }
+    &__form {
+        width: 660px;
+        margin: 45px auto 0 auto;
+        @media (max-width: 767px) {
+            width: 540px;
+        }
+        @media (max-width: 575px) {
+            width: 300px;
+        }
+    }
+    &__choose {
+        display: flex;
+        align-items: center;
+        position: relative;
+        &:not(:first-child) {
+            margin-top: 10px;
+        }
+        &:not(:nth-child(2)) {
+            justify-content: space-between;
+        }
+        @media (max-width: 575px) {
+            width: 300px;
+            flex-direction: column;
+        }
+    }
+    &__select {
+        @include roboto();
+        background: url('./assets/icons/sponsors/select_arrow.png') no-repeat right;
+        appearance: none;
+        width: 427px;
+        padding: 20px 22px;
+        border: 1px solid #e8d8b6;
+        font-size: 14px;
+        line-height: 24px;
+        font-weight: 300;
+        color: #606060;
+        cursor: pointer;
+        @media (max-width: 767px) {
+            width: 340px;
+        }
+        @media (max-width: 575px) {
+            width: 100%;
+            font-size: 12px;
+        }
+    }
+    &__lettering {
+        @include roboto();
+        font-size: 14px;
+        line-height: 24px;
+        font-weight: 500;
+        color: #606060;
+        span {
+            text-decoration: underline;
+        }
+    }
+    &__input {
+        @include roboto();
+        width: 407px;
+        padding: 15px 10px;
+        color: #606060;
+        border: 1px solid #e8d8b6;
+        font-size: 14px;
+        line-height: 24px;
+        @media (max-width: 767px) {
+            width: 318px;
+        }
+        @media (max-width: 575px) {
+            width: 280px;
+        }
+    }
+    &__package-btn {
+        @include roboto();
+        width: 120px;
+        padding: 15px 0;
+        background-color: #f2ead8;
+        text-align: center;
+        font-size: 14px;
+        line-height: 16px;
+        font-weight: 500;
+        text-transform: uppercase;
+        color: $gray-color;
+        cursor: pointer;
+        &_pay {
+            width: 105px;
+            @media (max-width: 767px) {
+                width: 83px;
+            }
+            @media (max-width: 575px) {
+                width: 65px;
+            }
+        }
+        &:not(:first-child) {
+            margin-left: 3px;
+        }
+        &:hover {
+            background-color: darken(#f2ead8, 10%);
+        }
+    }
+    &__wrapper-inner {
+        @include flexcenter();
+        margin-left: 24px;
+    }
+    &__submit {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        margin-top: 35px;
+        &-btn {
+            @include roboto();
+            margin-left: 117px;
+            background-color: $main-color;
+            border: none;
+            font-size: 13px;
+            line-height: 24px;
+            font-weight: 400;
+            color: $white-color;
+            text-transform: uppercase;
+            &:hover {
+                background-color: darken($main-color, 10%);
+            }
+            @media (max-width: 575px) {
+                margin-left: 70px;
+            }
+        }
+        &-terms {
+            @include flexcenter();
+            #regcheck {
+                appearance: none;
+                &:checked {
+                    background: url('./assets/icons/registration/mark.svg') center center/cover no-repeat;
+                    &:before {
+                        border: 1px solid green;
+                    } 
+                }
+                &:before {
+                    content: '';
+                    display: block;
+                    width: 20px;
+                    height: 20px;
+                    border: 1px solid $orange-light-color;
+                }
+            }
+            label {
+                @include roboto();
+                font-size: 14px;
+                line-height: 24px;
+                font-weight: 300;
+                color: #606060;
+                a {
+                    text-decoration: underline;
+                    color: #606060;
+                    &:hover {
+                        color: darken(#606060, 50%);
+                    }
+                }
+            }
+        }
+        
+    }
+}

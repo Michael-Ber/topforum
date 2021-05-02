@@ -101,6 +101,7 @@
     &__button {
         background-color: $main-color;
         color: $gray-color;
+        text-decoration: none;
         &:hover {
             background-color: darken($main-color, 10%);
         }
