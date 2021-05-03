@@ -118,7 +118,6 @@
 		text-align: center;
 		text-transform: uppercase;
 		cursor: pointer;
-		
 		&_register {
 			background-color: $main-color;
 			margin-right: 15px;
@@ -132,5 +131,84 @@
 				background-color: darken($gray-color, 10%);
 			}
 		}
+	}
+	&__popup {
+		@include flexcenter();
+		@include roboto();
+		display: none;
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		z-index: 1000;
+		transform: translate(-50%, -50%);
+		width: 357px;
+		flex-direction: column;
+		background-color: $white-color;
+		border: 2px solid $main-color;
+		padding: 35px 30px 30px 30px;
+		color: $gray-color;
+		line-height: 20px;
+		text-align: center;
+		&-title {
+			font-size: 17px;
+			font-weight: 500;
+		}
+		&-text {
+			font-size: 15px;
+			font-weight: 300;
+			margin-top: 10px;
+		}
+		&-form {
+			margin-top: 25px;
+		}
+		&-input {
+			@include roboto();
+			width: 100%;
+			height: 50px;
+			font-size: 14px;
+			line-height: 24px;
+			font-weight: 300;
+			border: 1px solid $orange-light-color;
+			color: #606060;
+			text-align: center;
+			&:not(:first-child) {
+				margin-top: 5px;
+			}
+			&::placeholder {
+				text-transform: uppercase;
+			}
+		}
+		&-submit {
+			@include roboto();
+			background-color: $main-color;
+			font-size: 13px;
+			line-height: 24px;
+			font-weight: 400;
+			color: $white-color;
+			margin-top: 12px;
+			border: none;
+			&:hover {
+				background-color: darken($main-color, 10%);
+			}
+		}
+		&-close {
+			position: absolute;
+			top: 0;
+			right: 0;
+			transform: translate(120%, -120%);
+			color: $white-color;
+			font-size: 45px;
+			cursor: pointer;
+		}
+	}
+	.popup__background {
+		display: none;
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 100;
+		width: 100%;
+		height: 100vh;
+		background-color: rgba(#000, .4);
 	}
 }

@@ -122,10 +122,14 @@
         }
         &-btn {
             background-color: $sec-color;
-            font-size: 13px;
-            color: $white-color;
+            
             text-transform: none;
             margin-top: 15px;
+            a {
+                font-size: 13px;
+                color: $white-color;
+                text-decoration: none;
+            }
             &:hover {
                 background: darken($sec-color, 10%);
             }
