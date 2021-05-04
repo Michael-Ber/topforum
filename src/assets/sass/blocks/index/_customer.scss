@@ -21,10 +21,10 @@
         display: flex;
         justify-content: flex-start;
         align-items: flex-start;
-        min-width: calc(50% - 50px);
-        &:not(:first-child) {
-            margin-left: 50px;
-        }
+        min-width: calc(50% - 25px);
+        // &:not(:first-child) {
+        //     margin-left: 50px;
+        // }
         @media (max-width: 991px) {
             min-width: calc(100% - 50px);
         }

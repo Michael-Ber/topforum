@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="style.css">
     <title>Topforum</title>
 </head>
@@ -144,7 +145,9 @@
                             TOP FORUM conferences are the best route to raise brand awareness, get pre- and after-event promotion among your target audience, confirm the highest level of your business, present your company services and catch the interest of highly qualified prospects and as a result to find new clients
                         </span>
                     </div>
-                    <div class="main__card-button btn">Learn more</div>
+                    <div class="main__card-button btn">
+                        <a href="./speakerdetail.html">Learn more</a>
+                    </div>
                     <div class="main__card-footer">Wealth TOP FORUM Israel 2016</div>
                 </li>
                 <li class="main__card">
@@ -159,7 +162,9 @@
                             TOP FORUM business conferences and events serve as the best platform to learn useful insights and new trends in your business area, engage with peers from the global community and choose the best available offer, and all that in one place, so your participation will safe dozens of working hours.
                         </span>
                     </div>
-                    <div class="main__card-button btn">Learn more</div>
+                    <div class="main__card-button btn">
+                        <a href="./speakerdetail.html">Learn more</a>
+                    </div>
                     <div class="main__card-footer">Wealth TOP FORUM Israel 2016</div>
                 </li>
                 <li class="main__card">
@@ -174,13 +179,17 @@
                             We thoroughly choose the key experts to make a speech at TOP FORUM international conferences and our audience obtains the most up-to-date information about new trends on the market. Should you like to share useful insights, become a speaker or to take part in panel discussion, please contact us.
                         </span>
                     </div>
-                    <div class="main__card-button btn">Learn more</div>
+                    <div class="main__card-button btn">
+                        <a href="./speakerdetail.html">Learn more</a>
+                    </div>
                     <div class="main__card-footer">Wealth TOP FORUM Israel 2016</div>
                 </li>
             </ul>
             <div class="main__buttons">
-                <div class="main__button main__button_register">Register now</div>
-                <div class="main__button main__button_subscribe">subscribe</div>
+                <div class="main__button main__button_register">
+                    <a href="./registration.html">Register now</a></div>
+                <div class="main__button main__button_subscribe">
+                    <a href="./registration.html">subscribe</a></div>
             </div>
             <div class="main__popup">
                 <h2 class="main__popup-title">SUBSCRIBE</h2>
@@ -205,9 +214,9 @@
         <div class="container">
             <h2 class="customer__title title">CUSTOMER REVIEWS</h2>
             <div class="customer__carousel">
-                <div class="customer__frame">
-                    <div class="customer__track">
-                        <div class="customer__item">
+                <div class="customer__frame swiper-container">
+                    <div class="customer__track swiper-wrapper">
+                        <div class="customer__item swiper-slide">
                             <div class="customer__photo">
                                 <img src="./assets/img/index/woman.jpg" alt="woman" class="with_photo">
                             </div>
@@ -218,7 +227,29 @@
                                 </span>
                             </div>
                         </div>
-                        <div class="customer__item">
+                        <div class="customer__item swiper-slide">
+                            <div class="customer__photo">
+                                <img src="./assets//icons/index/nophoto.png" alt="somephoto">
+                            </div>
+                            <div class="customer__descr">
+                                <span class="customer__name">Vinogradov Nikita and Oksana</span>
+                                <div class="customer__data"><span>04 SEPTEMBER 2015</span></div>
+                                <span class="customer__text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.
+                                </span>
+                            </div>
+                        </div>
+                        <div class="customer__item swiper-slide">
+                            <div class="customer__photo">
+                                <img src="./assets//icons/index/nophoto.png" alt="somephoto">
+                            </div>
+                            <div class="customer__descr">
+                                <span class="customer__name">Vinogradov Nikita and Oksana</span>
+                                <div class="customer__data"><span>04 SEPTEMBER 2015</span></div>
+                                <span class="customer__text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.
+                                </span>
+                            </div>
+                        </div>
+                        <div class="customer__item swiper-slide">
                             <div class="customer__photo">
                                 <img src="./assets//icons/index/nophoto.png" alt="somephoto">
                             </div>
@@ -334,6 +365,7 @@
     </footer>
     <!-- /FOOTER -->
 
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

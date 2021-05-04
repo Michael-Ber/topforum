@@ -68,7 +68,7 @@
 		}
 		&-text {
 			@include roboto();
-			min-height: 180px;
+			min-height: 135px;
 			font-size: 15px;
 			font-weight: 300;
 			text-align: center;
@@ -80,11 +80,14 @@
 		}
 		&-button {
 			background-color: $sec-color;
-			font-size: 13px;
 			line-height: 24px;
-			font-weight: 400;
-			color: $white-color;
 			margin: 23px auto 0 auto;
+			a {
+				font-weight: 400;
+				color: $white-color;
+				font-size: 13px;
+				text-decoration: none;
+			}
 			&:hover {
 				background-color: darken($sec-color, 20%);
 			}
@@ -112,12 +115,15 @@
 		@include roboto();
 		width: 153px;
 		padding: 14px 0;
-		font-size: 13px;
-		font-weight: 400;
-		color: $white-color;
 		text-align: center;
 		text-transform: uppercase;
 		cursor: pointer;
+		a {
+			font-size: 13px;
+			font-weight: 400;
+			text-decoration: none;
+			color: $white-color;
+		}
 		&_register {
 			background-color: $main-color;
 			margin-right: 15px;
