@@ -496,7 +496,8 @@
   padding: 45px 60px 70px 60px;
   background-color: #e8d8b6; }
   .clients__carousel {
-    position: relative; }
+    position: relative;
+    margin-top: 20px; }
     .clients__carousel-frame {
       overflow: hidden; }
     .clients__carousel-track {

@@ -3,6 +3,7 @@
     background-color: $orange-light-color;
     &__carousel {
         position: relative;
+        margin-top: 20px;
         &-frame {
             overflow: hidden;
         }
